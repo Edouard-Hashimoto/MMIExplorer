@@ -1,10 +1,10 @@
 import PocketBase from "pocketbase";
 
-const pb = new PocketBase("http://127.0.0.1:8090");
+const pb = new PocketBase("https://yubi.alwaysdata.net/");
 
 /**
  * DONNÉES INTÉGRALES (116 ENREGISTREMENTS)
- * Avec descriptions complètes (HTML) issues du PDF
+ * Avec fiches issues du CSV et descriptions HTML
  */
 const dataList = [
   {
@@ -23,7 +23,8 @@ const dataList = [
       "vagus96n0d95iug",
     ],
     description:
-      "<strong>Objectifs :</strong><br>Prolonger les acquis de l’enseignement secondaire par l’élargissement des connaissances culturelles du monde anglo-saxon :<br><ul><li>Autonomie en matière d’apprentissage de la langue</li><li>Compréhension orale d’un langage standard</li><li>Activités de prise de parole en continu et en interaction (publicité, média, monde du travail)</li></ul>",
+      "<strong>Objectifs :</strong><br>Prolonger les acquis de l’enseignement secondaire par l’élargissement des connaissances culturelles du monde anglo-saxon.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/654",
   },
   {
     code: "R102",
@@ -36,7 +37,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: [],
     description:
-      "<strong>Objectifs :</strong><br>Mise à niveau et renforcement des bases linguistiques. Travail de remédiation en autonomie guidée sur l’utilisation d’outils en ligne.",
+      "<strong>Objectifs :</strong><br>Mise à niveau et renforcement des bases linguistiques.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/655",
   },
   {
     code: "R103",
@@ -49,7 +51,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["z62f7ncpj8r4j0o"],
     description:
-      "<strong>Objectifs :</strong><br>Identifier les besoins des utilisateurs pour proposer des interfaces adaptées :<br><ul><li><strong>UX Design :</strong> utilité et utilisabilité</li><li><strong>Accessibilité :</strong> normes WCAG et RGAA</li><li><strong>Audit :</strong> critères de Bastien et Scapin</li></ul>",
+      "<strong>Objectifs :</strong><br>Identifier les besoins des utilisateurs pour proposer des interfaces adaptées.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/656",
   },
   {
     code: "R104",
@@ -62,7 +65,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["b91w6viteacsxwj", "cv9m15iqeqjtp0s"],
     description:
-      "<strong>Objectifs :</strong><br>Cerner les grands enjeux du numérique (politiques, économiques, sociétaux) :<br><ul><li>Histoire du Web et de l’Internet</li><li>Enjeux éthiques et écologiques (sobriété numérique)</li><li>Culture des données et algorithmique</li></ul>",
+      "<strong>Objectifs :</strong><br>Cerner les grands enjeux du numérique (politiques, économiques, sociétaux).",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/657",
   },
   {
     code: "R105",
@@ -75,7 +79,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["wo3rwi80eb2dsqp", "fhzo0z35mr8u3n8", "szy7sbbrot2smrv"],
     description:
-      "<strong>Objectifs :</strong><br>Analyser un marché et définir une cible :<br><ul><li>Diagnostic marketing (SWOT)</li><li>Segmentation, ciblage et positionnement</li><li>Marketing Mix (4P)</li></ul>",
+      "<strong>Objectifs :</strong><br>Analyser un marché et définir une cible.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/658",
   },
   {
     code: "R106",
@@ -93,7 +98,8 @@ const dataList = [
       "vagus96n0d95iug",
     ],
     description:
-      "<strong>Objectifs :</strong><br>Maîtriser les techniques d’expression pour structurer un discours convaincant :<br><ul><li>Fondamentaux de la communication</li><li>Techniques de prise de parole et rhétorique</li><li>Structuration et argumentation</li></ul>",
+      "<strong>Objectifs :</strong><br>Maîtriser les techniques d’expression pour structurer un discours convaincant.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/659",
   },
   {
     code: "R107",
@@ -106,7 +112,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["bn1sev819i4e7uw"],
     description:
-      "<strong>Objectifs :</strong><br>Découvrir les codes de l’écriture pour les écrans et le transmédia :<br><ul><li>Spécificités de l’écriture web</li><li>Scénarisation interactive</li><li>Storytelling</li></ul>",
+      "<strong>Objectifs :</strong><br>Découvrir les codes de l’écriture pour les écrans et le transmédia.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/660",
   },
   {
     code: "R108",
@@ -119,7 +126,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["p9npl5yq2pvrwww"],
     description:
-      "<strong>Objectifs :</strong><br>Découvrir les fondamentaux du design graphique :<br><ul><li>Théorie des couleurs et typographie</li><li>Outils de création vectorielle (Illustrator)</li><li>Traitement d’image (Photoshop)</li></ul>",
+      "<strong>Objectifs :</strong><br>Découvrir les fondamentaux du design graphique.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/661",
   },
   {
     code: "R109",
@@ -132,7 +140,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["wo3rwi80eb2dsqp", "hwtdvm0gw9q71qi"],
     description:
-      "<strong>Objectifs :</strong><br>Développer une culture visuelle et artistique :<br><ul><li>Grands courants de l'histoire de l'art</li><li>Analyse d'œuvres</li><li>Lien entre art et design numérique</li></ul>",
+      "<strong>Objectifs :</strong><br>Développer une culture visuelle et artistique.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/663",
   },
   {
     code: "R110",
@@ -145,7 +154,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["6v7u6fzhsq23789"],
     description:
-      "<strong>Objectifs :</strong><br>S'initier aux techniques de l'audiovisuel :<br><ul><li>Prise de vue (cadrage, lumière)</li><li>Prise de son</li><li>Montage vidéo (Premiere Pro)</li></ul>",
+      "<strong>Objectifs :</strong><br>S'initier aux techniques de l'audiovisuel.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/664",
   },
   {
     code: "R111",
@@ -158,7 +168,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["isidjocvgh8fgh9", "ic0yg8jxyy9prav"],
     description:
-      "<strong>Objectifs :</strong><br>Apprendre à structurer et mettre en forme une page web :<br><ul><li>HTML5 sémantique</li><li>CSS3 (sélecteurs, box model, Flexbox)</li><li>Respect des maquettes graphiques</li></ul>",
+      "<strong>Objectifs :</strong><br>Apprendre à structurer et mettre en forme une page web.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/665",
   },
   {
     code: "R112",
@@ -171,7 +182,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["itizxojhbg8f7sd"],
     description:
-      "<strong>Objectifs :</strong><br>Introduction à l'algorithmique et à la programmation :<br><ul><li>Logique de programmation (variables, boucles, conditions)</li><li>JavaScript côté client</li><li>Manipulation du DOM</li></ul>",
+      "<strong>Objectifs :</strong><br>Introduction à l'algorithmique et à la programmation.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/666",
   },
   {
     code: "R113",
@@ -184,7 +196,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["isidjocvgh8fgh9", "s6x954zgiyt66qc"],
     description:
-      "<strong>Objectifs :</strong><br>Comprendre le fonctionnement d'Internet et de l'hébergement :<br><ul><li>Protocoles HTTP, DNS, IP</li><li>Transfert de fichiers (FTP)</li><li>Configuration de base d'un serveur</li></ul>",
+      "<strong>Objectifs :</strong><br>Comprendre le fonctionnement d'Internet et de l'hébergement.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/668",
   },
   {
     code: "R114",
@@ -197,7 +210,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["mhq1n1yfkdlp8qa", "74xozc6k2m1qtne"],
     description:
-      "<strong>Objectifs :</strong><br>Comprendre comment l'information est numérisée et traitée :<br><ul><li>Codage de l'information (binaire, hexadécimal)</li><li>Formats de fichiers images et sons</li><li>Compression de données</li></ul>",
+      "<strong>Objectifs :</strong><br>Comprendre comment l'information est numérisée et traitée.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/669",
   },
   {
     code: "R115",
@@ -210,7 +224,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["081rzo9ghn8s7df", "f9n3lgqllcu2gnk", "lkdo07iy7ue3xi0"],
     description:
-      "<strong>Objectifs :</strong><br>Appréhender les fondamentaux de la gestion de projet :<br><ul><li>Cycle de vie d'un projet</li><li>Planification (Gantt)</li><li>Travail en équipe et outils collaboratifs</li></ul>",
+      "<strong>Objectifs :</strong><br>Appréhender les fondamentaux de la gestion de projet.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/670",
   },
   {
     code: "R116",
@@ -223,103 +238,8 @@ const dataList = [
     semestre: "84nitn3xv6us4l8",
     AC: ["b91w6viteacsxwj", "f9n3lgqllcu2gnk"],
     description:
-      "<strong>Objectifs :</strong><br>Comprendre l'environnement juridique et économique du numérique :<br><ul><li>Droit d'auteur et propriété intellectuelle</li><li>Protection des données personnelles (RGPD)</li><li>Modèles économiques du web</li></ul>",
-  },
-  {
-    code: "R117",
-    name: "PPP",
-    nb_heures_PPN: 20.0,
-    nb_heures_semaine: 20.0,
-    type: "Ressource",
-    competences: [
-      "szy17ug4fua81xz",
-      "iigajcomws2d9ld",
-      "wm200e26utyjyk5",
-      "dfqxt612fm54xik",
-    ],
-    ressources: [],
-    semestre: "84nitn3xv6us4l8",
-    AC: ["lkdo07iy7ue3xi0", "aplmqdo6os9ckax", "vagus96n0d95iug"],
-    description:
-      "<strong>Objectifs :</strong><br>Définir son Projet Personnel et Professionnel :<br><ul><li>Identification des compétences et appétences</li><li>Découverte des métiers du multimédia</li><li>Rédaction de CV et lettre de motivation</li></ul>",
-  },
-  {
-    code: "SAE101",
-    name: "Auditer une communication numérique",
-    nb_heures_PPN: 25.0,
-    nb_heures_semaine: 25.0,
-    type: "SAE",
-    competences: ["szy17ug4fua81xz"],
-    ressources: ["R109", "R104", "R105", "R109", "R114", "R116"],
-    semestre: "84nitn3xv6us4l8",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Mener un audit complet de la présence numérique d'une organisation.<br><strong>Livrables :</strong><br><ul><li>Rapport d'audit (SWOT, cibles, concurrence)</li><li>Analyse de l'existant (site web, réseaux sociaux)</li><li>Recommandations stratégiques</li></ul>",
-  },
-  {
-    code: "SAE102",
-    name: "Concevoir une recommandation de communication numérique",
-    nb_heures_PPN: 20.0,
-    nb_heures_semaine: 20.0,
-    type: "SAE",
-    competences: ["iigajcomws2d9ld"],
-    ressources: ["R101", "R105", "R106"],
-    semestre: "84nitn3xv6us4l8",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Élaborer une stratégie de communication digitale pour répondre à un besoin client.<br><strong>Livrables :</strong><br><ul><li>Plan de communication</li><li>Charte éditoriale</li><li>Planning des actions</li></ul>",
-  },
-  {
-    code: "SAE103",
-    name: "Produire les éléments d'une communication visuelle",
-    nb_heures_PPN: 22.5,
-    nb_heures_semaine: 22.5,
-    type: "SAE",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: ["R108", "R109", "R114"],
-    semestre: "84nitn3xv6us4l8",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Concevoir et réaliser des supports graphiques (print et web) cohérents.<br><strong>Livrables :</strong><br><ul><li>Logo et charte graphique</li><li>Affiche, flyer ou maquette web</li><li>Dossier de création</li></ul>",
-  },
-  {
-    code: "SAE104",
-    name: "Réaliser une production audio et vidéo",
-    nb_heures_PPN: 22.5,
-    nb_heures_semaine: 22.5,
-    type: "SAE",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: ["R110", "R114"],
-    semestre: "84nitn3xv6us4l8",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Réaliser une courte vidéo promotionnelle ou informative.<br><strong>Livrables :</strong><br><ul><li>Scénario et storyboard</li><li>Vidéo montée et habillée</li><li>Fichiers sources et export final</li></ul>",
-  },
-  {
-    code: "SAE105",
-    name: "Produire un site Web",
-    nb_heures_PPN: 55.0,
-    nb_heures_semaine: 55.0,
-    type: "SAE",
-    competences: ["wm200e26utyjyk5"],
-    ressources: ["R111", "R112", "R113", "R115"],
-    semestre: "84nitn3xv6us4l8",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Développer un site web statique multipages et responsive.<br><strong>Livrables :</strong><br><ul><li>Site web fonctionnel en ligne</li><li>Code HTML/CSS/JS propre et commenté</li><li>Documentation technique</li></ul>",
-  },
-  {
-    code: "SAE106",
-    name: "Gérer un projet de communication numérique",
-    nb_heures_PPN: 45.0,
-    nb_heures_semaine: 45.0,
-    type: "SAE",
-    competences: ["dfqxt612fm54xik"],
-    ressources: ["R101", "R106", "R115", "R116", "R117"],
-    semestre: "84nitn3xv6us4l8",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Coordonner une équipe autour d'un projet multimédia transversal.<br><strong>Livrables :</strong><br><ul><li>Dossier de gestion de projet (planning, budget)</li><li>Comptes-rendus de réunion</li><li>Bilan de projet</li></ul>",
+      "<strong>Objectifs :</strong><br>Comprendre l'environnement juridique et économique du numérique.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/671",
   },
   {
     code: "R201",
@@ -337,85 +257,8 @@ const dataList = [
       "bn1sev819i4e7uw",
     ],
     description:
-      "<strong>Objectifs :</strong><br>Développer l'anglais professionnel et technique.<br><ul><li>Vocabulaire spécifique au multimédia</li><li>Rédaction de documents professionnels</li><li>Présentation orale de projets</li></ul>",
-  },
-  {
-    code: "R202",
-    name: "Anglais",
-    nb_heures_PPN: 10.0,
-    nb_heures_semaine: 10.0,
-    type: "Ressource",
-    competences: ["iigajcomws2d9ld", "nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Renforcement des compétences linguistiques en contexte professionnel.",
-  },
-  {
-    code: "R203",
-    name: "Ergonomie & Accessibilité",
-    nb_heures_PPN: 15.0,
-    nb_heures_semaine: 15.0,
-    type: "Ressource",
-    competences: ["szy17ug4fua81xz"],
-    ressources: [],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: ["bc96ckzcabnfp4s"],
-    description:
-      "<strong>Objectifs :</strong><br>Approfondir l'ergonomie des interfaces web et mobiles.<br><ul><li>Conception centrée utilisateur</li><li>Architecture de l'information</li><li>Maquettage fonctionnel (wireframing)</li></ul>",
-  },
-  {
-    code: "R204",
-    name: "Culture numérique",
-    nb_heures_PPN: 15.0,
-    nb_heures_semaine: 15.0,
-    type: "Ressource",
-    competences: ["szy17ug4fua81xz"],
-    ressources: [],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: ["cv9m15iqeqjtp0s", "fhzo0z35mr8u3n8", "szy7sbbrot2smrv"],
-    description:
-      "<strong>Objectifs :</strong><br>Analyser les pratiques et usages numériques contemporains.<br><ul><li>Réseaux sociaux et communautés en ligne</li><li>Économie de l'attention</li><li>Identité numérique</li></ul>",
-  },
-  {
-    code: "R205",
-    name: "Stratégie de communication & marketing",
-    nb_heures_PPN: 15.0,
-    nb_heures_semaine: 15.0,
-    type: "Ressource",
-    competences: ["iigajcomws2d9ld"],
-    ressources: [],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: ["fhzo0z35mr8u3n8", "szy7sbbrot2smrv", "bn1sev819i4e7uw"],
-    description:
-      "<strong>Objectifs :</strong><br>Concevoir une stratégie de communication digitale.<br><ul><li>Plan média et choix des canaux</li><li>Marketing de contenu (Content Marketing)</li><li>Mesure de la performance (KPI)</li></ul>",
-  },
-  {
-    code: "R206",
-    name: "Expression, communication et réthorique",
-    nb_heures_PPN: 15.0,
-    nb_heures_semaine: 15.0,
-    type: "Ressource",
-    competences: ["dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: ["fhzo0z35mr8u3n8", "szy7sbbrot2smrv", "bn1sev819i4e7uw"],
-    description:
-      "<strong>Objectifs :</strong><br>Améliorer sa communication écrite et orale en contexte professionnel.<br><ul><li>Écriture journalistique et web</li><li>Techniques d'interview</li><li>Animation de réunions</li></ul>",
-  },
-  {
-    code: "R207",
-    name: "Ecriture multimédia et narration",
-    nb_heures_PPN: 15.0,
-    nb_heures_semaine: 15.0,
-    type: "Ressource",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: ["hwtdvm0gw9q71qi"],
-    description:
-      "<strong>Objectifs :</strong><br>Scénariser des contenus pour les médias numériques.<br><ul><li>Narration interactive</li><li>Ecriture de scripts vidéo</li><li>Conception de podcasts</li></ul>",
+      "<strong>Objectifs :</strong><br>Développer l'anglais professionnel et technique.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/672",
   },
   {
     code: "R208",
@@ -428,7 +271,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["p9npl5yq2pvrwww", "66fafg2z82akyy0"],
     description:
-      "<strong>Objectifs :</strong><br>Perfectionner la création graphique pour le web et le print.<br><ul><li>Mise en page avancée (InDesign)</li><li>Identité visuelle et branding</li><li>Retouche photo avancée</li></ul>",
+      "<strong>Objectifs :</strong><br>Perfectionner la création graphique pour le web et le print.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/673",
   },
   {
     code: "R209",
@@ -441,7 +285,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["6v7u6fzhsq23789"],
     description:
-      "<strong>Objectifs :</strong><br>Analyser les tendances graphiques et artistiques contemporaines.<br><ul><li>Design graphique contemporain</li><li>Arts numériques et interactifs</li><li>Esthétique des interfaces</li></ul>",
+      "<strong>Objectifs :</strong><br>Analyser les tendances graphiques et artistiques contemporaines.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/674",
   },
   {
     code: "R210",
@@ -454,7 +299,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["isidjocvgh8fgh9", "is8fjodgh8fgh8s"],
     description:
-      "<strong>Objectifs :</strong><br>Réaliser des contenus audiovisuels avancés.<br><ul><li>Techniques de tournage multicaméras</li><li>Post-production avancée (effets, étalonnage)</li><li>Mixage sonore</li></ul>",
+      "<strong>Objectifs :</strong><br>Réaliser des contenus audiovisuels avancés.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/675",
   },
   {
     code: "R211",
@@ -467,7 +313,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["isidjocvgh8fgh9", "itizxojhbg8f7sd"],
     description:
-      "<strong>Objectifs :</strong><br>Utiliser un CMS pour gérer un site web.<br><ul><li>Installation et configuration d'un CMS (WordPress)</li><li>Création de thèmes et plugins</li><li>Gestion des utilisateurs et des contenus</li></ul>",
+      "<strong>Objectifs :</strong><br>Utiliser un CMS pour gérer un site web.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/676",
   },
   {
     code: "R212",
@@ -480,7 +327,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["isidjocvgh8fgh9", "s6x954zgiyt66qc"],
     description:
-      "<strong>Objectifs :</strong><br>Maîtriser l'intégration web avancée.<br><ul><li>Préprocesseurs CSS (SASS)</li><li>Frameworks CSS (Bootstrap, Tailwind)</li><li>Animations CSS</li></ul>",
+      "<strong>Objectifs :</strong><br>Maîtriser l'intégration web avancée.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/677",
   },
   {
     code: "R213",
@@ -493,7 +341,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["mhq1n1yfkdlp8qa", "74xozc6k2m1qtne"],
     description:
-      "<strong>Objectifs :</strong><br>Développer des applications web dynamiques.<br><ul><li>Développement back-end (PHP)</li><li>Interactions avec une base de données (SQL)</li><li>Sécurité des applications web</li></ul>",
+      "<strong>Objectifs :</strong><br>Développer des applications web dynamiques.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/678",
   },
   {
     code: "R214",
@@ -506,7 +355,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["f9n3lgqllcu2gnk", "yffyyd7g00flctr"],
     description:
-      "<strong>Objectifs :</strong><br>Concevoir et gérer une base de données relationnelle.<br><ul><li>Modélisation des données (MCD, MLD)</li><li>Langage SQL (requêtes complexes)</li><li>Administration de base de données</li></ul>",
+      "<strong>Objectifs :</strong><br>Concevoir et gérer une base de données relationnelle.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/679",
   },
   {
     code: "R215",
@@ -519,7 +369,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["hw5gf2bdgcbr1t5", "aplmqdo6os9ckax", "vagus96n0d95iug"],
     description:
-      "<strong>Objectifs :</strong><br>Déployer et administrer un site web sur un serveur.<br><ul><li>Configuration de serveur web (Apache, Nginx)</li><li>Nom de domaine et DNS</li><li>Sécurisation (HTTPS)</li></ul>",
+      "<strong>Objectifs :</strong><br>Déployer et administrer un site web sur un serveur.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/680",
   },
   {
     code: "R216",
@@ -532,7 +383,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["cv9m15iqeqjtp0s", "p9npl5yq2pvrwww"],
     description:
-      "<strong>Objectifs :</strong><br>Manipuler et traiter des données multimédias.<br><ul><li>Traitement d'images et de sons</li><li>Formats de fichiers et compression</li><li>Introduction à la programmation créative</li></ul>",
+      "<strong>Objectifs :</strong><br>Manipuler et traiter des données multimédias.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/681",
   },
   {
     code: "R217",
@@ -545,7 +397,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["081rzo9ghn8s7df", "f9n3lgqllcu2gnk", "lkdo07iy7ue3xi0"],
     description:
-      "<strong>Objectifs :</strong><br>Approfondir la gestion de projet agile.<br><ul><li>Méthodes agiles (Scrum, Kanban)</li><li>Outils de gestion de projet (Trello, Jira)</li><li>Gestion des risques et qualité</li></ul>",
+      "<strong>Objectifs :</strong><br>Approfondir la gestion de projet agile.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/682",
   },
   {
     code: "R218",
@@ -558,102 +411,8 @@ const dataList = [
     semestre: "zgm8hcf9uyyl70u",
     AC: ["b91w6viteacsxwj", "f9n3lgqllcu2gnk"],
     description:
-      "<strong>Objectifs :</strong><br>Appréhender les enjeux économiques et juridiques du numérique.<br><ul><li>Droit de l'internet et du commerce électronique</li><li>Business models du numérique</li><li>Entrepreneuriat numérique</li></ul>",
-  },
-  {
-    code: "R219",
-    name: "PPP",
-    nb_heures_PPN: 20.0,
-    nb_heures_semaine: 20.0,
-    type: "Ressource",
-    competences: ["dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: ["lkdo07iy7ue3xi0", "aplmqdo6os9ckax", "vagus96n0d95iug"],
-    description:
-      "<strong>Objectifs :</strong><br>Préciser son projet professionnel et préparer son stage.<br><ul><li>Recherche de stage et méthodologie</li><li>Préparation aux entretiens</li><li>Développement du réseau professionnel</li></ul>",
-  },
-  {
-    code: "SAE201",
-    name: "Exploration des usages",
-    nb_heures_PPN: 20.0,
-    nb_heures_semaine: 20.0,
-    type: "SAE",
-    competences: ["szy17ug4fua81xz"],
-    ressources: ["R203", "R204", "R216"],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Réaliser une étude sur les usages numériques d'une cible spécifique.<br><strong>Livrables :</strong><br><ul><li>Rapport d'étude d'usages</li><li>Analyse de la concurrence</li><li>Recommandations ergonomiques</li></ul>",
-  },
-  {
-    code: "SAE202",
-    name: "Conception d'un produit ou d'un service et sa communication",
-    nb_heures_PPN: 105.0,
-    nb_heures_semaine: 105.0,
-    type: "SAE",
-    competences: ["iigajcomws2d9ld"],
-    ressources: [
-      "R201",
-      "R202",
-      "R205",
-      "R207",
-      "R210",
-      "R209",
-      "R208",
-      "R216",
-      "R211",
-      "R217",
-    ],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Concevoir un service numérique innovant et sa stratégie de lancement.<br><strong>Livrables :</strong><br><ul><li>Dossier de conception</li><li>Maquettes et prototypes</li><li>Plan de communication et supports promotionnels</li></ul>",
-  },
-  {
-    code: "SAE203",
-    name: "Concevoir un site web avec une source de données",
-    nb_heures_PPN: 50.0,
-    nb_heures_semaine: 50.0,
-    type: "SAE",
-    competences: ["wm200e26utyjyk5"],
-    ressources: ["R212", "R213", "R214", "R215"],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Développer un site web dynamique administrable (CMS ou sur-mesure).<br><strong>Livrables :</strong><br><ul><li>Site web dynamique fonctionnel</li><li>Base de données opérationnelle</li><li>Interface d'administration</li></ul>",
-  },
-  {
-    code: "SAE204",
-    name: "Construire sa présence en ligne",
-    nb_heures_PPN: 20.0,
-    nb_heures_semaine: 20.0,
-    type: "SAE",
-    competences: ["dfqxt612fm54xik"],
-    ressources: ["R206", "R218", "R219"],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Développer son identité numérique professionnelle (Portfolio, LinkedIn).<br><strong>Livrables :</strong><br><ul><li>Portfolio en ligne</li><li>Profils réseaux sociaux professionnels</li><li>CV et lettre de motivation adaptés</li></ul>",
-  },
-  {
-    code: "S2 Portfolio",
-    name: "Portfolio",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "SAE",
-    competences: [
-      "szy17ug4fua81xz",
-      "iigajcomws2d9ld",
-      "nlbvjuwpds4y1uy",
-      "wm200e26utyjyk5",
-      "dfqxt612fm54xik",
-    ],
-    ressources: [],
-    semestre: "zgm8hcf9uyyl70u",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Valoriser ses compétences et réalisations à travers un portfolio professionnel.<br><ul><li>Sélection de travaux significatifs</li><li>Réflexivité sur les apprentissages</li><li>Mise en forme professionnelle</li></ul>",
+      "<strong>Objectifs :</strong><br>Appréhender les enjeux économiques et juridiques du numérique.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/683",
   },
   {
     code: "R301",
@@ -671,7 +430,8 @@ const dataList = [
       "bn1sev819i4e7uw",
     ],
     description:
-      "<strong>Objectifs :</strong><br>Préparer sa mobilité internationale et l'anglais des affaires :<br><ul><li>CV et entretien en anglais</li><li>Vocabulaire du marketing et du design</li><li>Communication interculturelle</li></ul>",
+      "<strong>Objectifs :</strong><br>Préparer sa mobilité internationale et l'anglais des affaires.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/684",
   },
   {
     code: "R302",
@@ -690,6 +450,7 @@ const dataList = [
     ],
     description:
       "<strong>Objectifs :</strong><br>Consolidation des compétences linguistiques pour la communication professionnelle.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/685",
   },
   {
     code: "R303",
@@ -702,7 +463,8 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["z62f7ncpj8r4j0o", "bn1sev819i4e7uw"],
     description:
-      "<strong>Objectifs :</strong><br>Approfondir la démarche UX Design :<br><ul><li>Recherche utilisateur avancée (interviews, personas)</li><li>Parcours utilisateurs (User Journey Map)</li><li>Architecture de l'information complexe</li></ul>",
+      "<strong>Objectifs :</strong><br>Approfondir la démarche UX Design.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/686",
   },
   {
     code: "R304",
@@ -715,7 +477,8 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["b91w6viteacsxwj", "cv9m15iqeqjtp0s"],
     description:
-      "<strong>Objectifs :</strong><br>Comprendre les écosystèmes et dispositifs de communication numérique :<br><ul><li>Histoire des médias numériques et d'Internet</li><li>Enjeux sociétaux : surveillance, données personnelles, sobriété numérique</li><li>Gouvernance d'Internet et neutralité du net</li></ul>",
+      "<strong>Objectifs :</strong><br>Comprendre les écosystèmes et dispositifs de communication numérique.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/687",
   },
   {
     code: "R305",
@@ -728,7 +491,8 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["fhzo0z35mr8u3n8", "szy7sbbrot2smrv"],
     description:
-      "<strong>Objectifs :</strong><br>Concevoir une stratégie de communication digitale complète :<br><ul><li>Audit de communication</li><li>Définition des objectifs et cibles</li><li>Stratégie de contenu et ligne éditoriale</li></ul>",
+      "<strong>Objectifs :</strong><br>Concevoir une stratégie de communication digitale complète.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/688",
   },
   {
     code: "R306",
@@ -741,11 +505,12 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["fhzo0z35mr8u3n8", "szy7sbbrot2smrv", "bc96ckzcabnfp4s"],
     description:
-      "<strong>Objectifs :</strong><br>Maîtriser les techniques de référencement naturel (SEO) :<br><ul><li>Optimisation technique (balisage, performance)</li><li>Optimisation sémantique et rédaction web</li><li>Stratégie de netlinking</li></ul>",
+      "<strong>Objectifs :</strong><br>Maîtriser les techniques de référencement naturel (SEO).",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/689",
   },
   {
     code: "R307",
-    name: "Expression, communication et réthorique",
+    name: "Expression, communication et rhétorique",
     nb_heures_PPN: 15.0,
     nb_heures_semaine: 15.0,
     type: "Ressource",
@@ -759,7 +524,8 @@ const dataList = [
       "vagus96n0d95iug",
     ],
     description:
-      "<strong>Objectifs :</strong><br>Développer ses capacités d'argumentation et de persuasion :<br><ul><li>Techniques de rhétorique et d'éloquence</li><li>Communication de crise</li><li>Pitch de projet</li></ul>",
+      "<strong>Objectifs :</strong><br>Développer ses capacités d'argumentation et de persuasion.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/690",
   },
   {
     code: "R308",
@@ -772,72 +538,8 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["bn1sev819i4e7uw"],
     description:
-      "<strong>Objectifs :</strong><br>Scénariser des expériences utilisateurs engageantes :<br><ul><li>Design narratif pour le web et le jeu vidéo</li><li>Micro-copywriting et UX Writing</li><li>Scénarisation de vidéos et podcasts</li></ul>",
-  },
-  {
-    code: "R309",
-    name: "Création et design interactif (UI)",
-    nb_heures_PPN: 30.0,
-    nb_heures_semaine: 30.0,
-    type: "Ressource",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "0gceebh8clg5mbp",
-    AC: ["p9npl5yq2pvrwww", "66fafg2z82akyy0"],
-    description:
-      "<strong>Objectifs :</strong><br>Concevoir des interfaces graphiques avancées :<br><ul><li>Design System et bibliothèques de composants</li><li>Prototypage haute fidélité (Figma, Adobe XD)</li><li>Design d'interaction et micro-animations</li></ul>",
-  },
-  {
-    code: "R310",
-    name: "Culture artistique",
-    nb_heures_PPN: 15.0,
-    nb_heures_semaine: 15.0,
-    type: "Ressource",
-    competences: ["szy17ug4fua81xz", "nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "0gceebh8clg5mbp",
-    AC: ["z62f7ncpj8r4j0o", "bn1sev819i4e7uw"],
-    description:
-      "<strong>Objectifs :</strong><br>Enrichir sa culture visuelle et artistique :<br><ul><li>Histoire du design graphique et numérique</li><li>Analyse d'œuvres contemporaines</li><li>Veille créative et tendances</li></ul>",
-  },
-  {
-    code: "R311",
-    name: "Audiovisuel et motion design",
-    nb_heures_PPN: 30.0,
-    nb_heures_semaine: 30.0,
-    type: "Ressource",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "0gceebh8clg5mbp",
-    AC: ["6v7u6fzhsq23789", "p9npl5yq2pvrwww"],
-    description:
-      "<strong>Objectifs :</strong><br>Produire des contenus animés (Motion Design) :<br><ul><li>Animation 2D (After Effects)</li><li>Habillage vidéo et titrage</li><li>Principes d'animation</li></ul>",
-  },
-  {
-    code: "R312",
-    name: "Développement Front et intégration",
-    nb_heures_PPN: 30.0,
-    nb_heures_semaine: 30.0,
-    type: "Ressource",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "0gceebh8clg5mbp",
-    AC: ["isidjocvgh8fgh9", "itizxojhbg8f7sd", "s6x954zgiyt66qc"],
-    description:
-      "<strong>Objectifs :</strong><br>Maîtriser l'intégration web moderne :<br><ul><li>Méthodologies CSS (BEM, SMACSS)</li><li>Frameworks CSS avancés (Tailwind)</li><li>Accessibilité web et qualité du code</li></ul>",
-  },
-  {
-    code: "R313",
-    name: "Dev back (dev) / Gestion de contenus (non dev)",
-    nb_heures_PPN: 30.0,
-    nb_heures_semaine: 30.0,
-    type: "Ressource",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "0gceebh8clg5mbp",
-    AC: ["isidjocvgh8fgh9", "itizxojhbg8f7sd", "qltbwt92ptok81e"],
-    description:
-      "<strong>Objectifs :</strong><br>Développement back-end avancé ou gestion de CMS :<br><ul><li><strong>Dev :</strong> Frameworks PHP (Symfony/Laravel), API REST</li><li><strong>Non-Dev :</strong> Administration avancée de CMS, SEO technique</li></ul>",
+      "<strong>Objectifs :</strong><br>Scénariser des expériences utilisateurs engageantes.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/691",
   },
   {
     code: "R314",
@@ -850,7 +552,8 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["isidjocvgh8fgh9", "s6x954zgiyt66qc", "d64br92f1vevjek"],
     description:
-      "<strong>Objectifs :</strong><br>Mettre en production des applications web :<br><ul><li>Serveurs web et bases de données</li><li>Déploiement continu (CI/CD)</li><li>Conteneurisation (Docker)</li></ul>",
+      "<strong>Objectifs :</strong><br>Mettre en production des applications web.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1590",
   },
   {
     code: "R315",
@@ -863,7 +566,8 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["mhq1n1yfkdlp8qa", "74xozc6k2m1qtne"],
     description:
-      "<strong>Objectifs :</strong><br>Traiter et visualiser des données :<br><ul><li>Formats de données structurées (JSON, XML)</li><li>Visualisation de données (DataViz)</li><li>Traitement automatisé des médias</li></ul>",
+      "<strong>Objectifs :</strong><br>Traiter et visualiser des données.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1590",
   },
   {
     code: "R316",
@@ -876,7 +580,8 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["081rzo9ghn8s7df", "f9n3lgqllcu2gnk", "lkdo07iy7ue3xi0"],
     description:
-      "<strong>Objectifs :</strong><br>Piloter un projet numérique en équipe :<br><ul><li>Méthodes agiles (Scrum)</li><li>Gestion des ressources et du temps</li><li>Outils de collaboration et de suivi</li></ul>",
+      "<strong>Objectifs :</strong><br>Piloter un projet numérique en équipe.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1592",
   },
   {
     code: "R317",
@@ -889,87 +594,8 @@ const dataList = [
     semestre: "0gceebh8clg5mbp",
     AC: ["f9n3lgqllcu2gnk", "vu0rxz4itc6wb1c"],
     description:
-      "<strong>Objectifs :</strong><br>Comprendre l'environnement légal et économique :<br><ul><li>Droit des contrats et propriété intellectuelle</li><li>RGPD et protection des données</li><li>Business models du numérique</li></ul>",
-  },
-  {
-    code: "R318",
-    name: "PPP",
-    nb_heures_PPN: 15.0,
-    nb_heures_semaine: 15.0,
-    type: "Ressource",
-    competences: ["dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "0gceebh8clg5mbp",
-    AC: ["lkdo07iy7ue3xi0", "aplmqdo6os9ckax", "vagus96n0d95iug"],
-    description:
-      "<strong>Objectifs :</strong><br>Construire son projet professionnel :<br><ul><li>Recherche de stage et alternance</li><li>Réseau professionnel et e-réputation</li><li>Bilan de compétences</li></ul>",
-  },
-  {
-    code: "SAE301",
-    name: "Intégrer des interfaces utilisateurs au sein d'un système d'information",
-    nb_heures_PPN: 25.0,
-    nb_heures_semaine: 25.0,
-    type: "SAE",
-    competences: ["szy17ug4fua81xz"],
-    ressources: [
-      "R302",
-      "R303",
-      "R308",
-      "R309",
-      "R310",
-      "R311",
-      "R312",
-      "R313",
-      "R314",
-      "R315",
-      "R316",
-      "R317",
-      "R318",
-    ],
-    semestre: "0gceebh8clg5mbp",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Développer une application web complète (front et back) répondant à un cahier des charges fonctionnel.<br><strong>Livrables :</strong><br><ul><li>Application fonctionnelle</li><li>Documentation technique</li><li>Présentation orale</li></ul>",
-  },
-  {
-    code: "SAE302",
-    name: "Produire des contenus pour une communication plurimédia",
-    nb_heures_PPN: 25.0,
-    nb_heures_semaine: 25.0,
-    type: "SAE",
-    competences: ["iigajcomws2d9ld", "nlbvjuwpds4y1uy"],
-    ressources: [
-      "R302",
-      "R303",
-      "R308",
-      "R309",
-      "R310",
-      "R311",
-      "R312",
-      "R313",
-      "R314",
-      "R315",
-      "R316",
-      "R317",
-      "R318",
-    ],
-    semestre: "0gceebh8clg5mbp",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Concevoir et produire des contenus multimédias (vidéo, motion design, infographie) pour une campagne de communication.<br><strong>Livrables :</strong><br><ul><li>Vidéos et animations</li><li>Supports graphiques</li><li>Stratégie de diffusion</li></ul>",
-  },
-  {
-    code: "SAE303",
-    name: "Concevoir des visualisations de données pour le web et un support animé",
-    nb_heures_PPN: 20.0,
-    nb_heures_semaine: 20.0,
-    type: "SAE",
-    competences: ["wm200e26utyjyk5", "dfqxt612fm54xik"],
-    ressources: ["R315", "R311", "R316"],
-    semestre: "0gceebh8clg5mbp",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Créer des visualisations de données interactives (DataViz) pour le web.<br><strong>Livrables :</strong><br><ul><li>Interface de visualisation interactive</li><li>Animation de données (Data Motion)</li></ul>",
+      "<strong>Objectifs :</strong><br>Comprendre l'environnement légal et économique.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1593",
   },
   {
     code: "R401",
@@ -987,7 +613,8 @@ const dataList = [
       "qz21a34rigm62v0",
     ],
     description:
-      "<strong>Objectifs :</strong><br>Maîtriser l'anglais professionnel en contexte international.<br><ul><li>Négociation et argumentation</li><li>Rédaction professionnelle avancée</li><li>Culture des pays anglophones</li></ul>",
+      "<strong>Objectifs :</strong><br>Maîtriser l'anglais professionnel en contexte international.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1594",
   },
   {
     code: "R402",
@@ -1000,7 +627,8 @@ const dataList = [
     semestre: "bnvylaxvx16lhyk",
     AC: ["f9n3lgqllcu2gnk", "vu0rxz4itc6wb1c"],
     description:
-      "<strong>Objectifs :</strong><br>Comprendre les aspects juridiques et économiques avancés.<br><ul><li>Contrats de prestation numérique</li><li>Gestion financière de projet</li><li>Droit des marques et brevets</li></ul>",
+      "<strong>Objectifs :</strong><br>Comprendre les aspects juridiques et économiques avancés.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1596",
   },
   {
     code: "R403",
@@ -1019,7 +647,8 @@ const dataList = [
       "v1jzojhg8f76dfg",
     ],
     description:
-      "<strong>Objectifs :</strong><br>Concevoir des expériences utilisateurs innovantes et complexes.<br><ul><li>UX Strategy</li><li>Service Design</li><li>Tests utilisateurs avancés</li></ul>",
+      "<strong>Objectifs :</strong><br>Concevoir des expériences utilisateurs innovantes et complexes.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1597",
   },
   {
     code: "R404",
@@ -1032,7 +661,8 @@ const dataList = [
     semestre: "bnvylaxvx16lhyk",
     AC: ["f9n3lgqllcu2gnk", "5rqf35r9f2mltmb", "qz21a34rigm62v0"],
     description:
-      "<strong>Objectifs :</strong><br>Communiquer efficacement en situation professionnelle complexe.<br><ul><li>Communication de crise</li><li>Management d'équipe</li><li>Techniques de vente et négociation</li></ul>",
+      "<strong>Objectifs :</strong><br>Communiquer efficacement en situation professionnelle complexe.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1598",
   },
   {
     code: "R405 Crea",
@@ -1051,45 +681,7 @@ const dataList = [
     ],
     description:
       "<strong>Objectifs :</strong><br>Produire et gérer des contenus créatifs pour des campagnes 360°.",
-  },
-  {
-    code: "R406 Crea",
-    name: "Culture artistique",
-    nb_heures_PPN: 30.0,
-    nb_heures_semaine: 30.0,
-    type: "Ressource",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: ["v5jzojhg8f76dfg", "v6jzojhg8f76dfg"],
-    description:
-      "<strong>Objectifs :</strong><br>Approfondir la culture visuelle et les tendances graphiques actuelles.",
-  },
-  {
-    code: "R407 Crea",
-    name: "Audiovisuel   Motion design",
-    nb_heures_PPN: 30.0,
-    nb_heures_semaine: 30.0,
-    type: "Ressource",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: ["nlbvjuwpds4y1uy"],
-    description:
-      "<strong>Objectifs :</strong><br>Maîtriser les techniques avancées de motion design et d'effets visuels.",
-  },
-  {
-    code: "R408 Crea",
-    name: "Ecriture multimédia et narration",
-    nb_heures_PPN: 30.0,
-    nb_heures_semaine: 30.0,
-    type: "Ressource",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: ["bn1sev819i4e7uw"],
-    description:
-      "<strong>Objectifs :</strong><br>Scénariser des projets transmédias et immersifs.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1600",
   },
   {
     code: "R405 Dev",
@@ -1103,6 +695,21 @@ const dataList = [
     AC: ["jun69dqw7z91hbe"],
     description:
       "<strong>Objectifs :</strong><br>Concevoir des interactions riches et des interfaces innovantes.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1601",
+  },
+  {
+    code: "R406 Crea",
+    name: "Culture artistique",
+    nb_heures_PPN: 30.0,
+    nb_heures_semaine: 30.0,
+    type: "Ressource",
+    competences: ["nlbvjuwpds4y1uy"],
+    ressources: [],
+    semestre: "bnvylaxvx16lhyk",
+    AC: ["v5jzojhg8f76dfg", "v6jzojhg8f76dfg"],
+    description:
+      "<strong>Objectifs :</strong><br>Approfondir la culture visuelle et les tendances graphiques actuelles.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1603",
   },
   {
     code: "R406 Dev",
@@ -1115,52 +722,8 @@ const dataList = [
     semestre: "bnvylaxvx16lhyk",
     AC: ["v2jzojhg8f76dfg", "v4jzojhg8f76dfg"],
     description:
-      "<strong>Objectifs :</strong><br>Maîtriser les frameworks JS modernes (Vue, React) et l'architecture front-end.",
-  },
-  {
-    code: "R407 Dev",
-    name: "Développement back",
-    nb_heures_PPN: 40.0,
-    nb_heures_semaine: 40.0,
-    type: "Ressource",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: ["v3jzojhg8f76dfg"],
-    description:
-      "<strong>Objectifs :</strong><br>Développer des API robustes et sécurisées, architecture MVC.",
-  },
-  {
-    code: "R408 Dev",
-    name: "Déploiement de services",
-    nb_heures_PPN: 25.0,
-    nb_heures_semaine: 25.0,
-    type: "Ressource",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: ["d64br92f1vevjek"],
-    description:
-      "<strong>Objectifs :</strong><br>Automatiser le déploiement (CI/CD), conteneurisation (Docker).",
-  },
-  {
-    code: "R405 Strat UX",
-    name: "Stratégie de Com / Webmarketing",
-    nb_heures_PPN: 45.0,
-    nb_heures_semaine: 45.0,
-    type: "Ressource",
-    competences: ["iigajcomws2d9ld"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [
-      "u4jzojhg8f76dfg",
-      "u5jzojhg8f76dfg",
-      "v1jzojhg8f76dfg",
-      "v2jzojhg8f76dfg",
-      "ic0yg8jxyy9prav",
-    ],
-    description:
-      "<strong>Objectifs :</strong><br>Élaborer des stratégies marketing digitales performantes (SEO/SEA, Social Media).",
+      "<strong>Objectifs :</strong><br>Maîtriser les frameworks JS modernes (Vue, React).",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1604",
   },
   {
     code: "R406 Strat UX",
@@ -1174,6 +737,35 @@ const dataList = [
     AC: ["okmrt6kxxt5muvd", "cfomcx517n3fuj7"],
     description:
       "<strong>Objectifs :</strong><br>Utiliser le storytelling pour valoriser une marque ou un produit.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1606",
+  },
+  {
+    code: "R407 Crea",
+    name: "Audiovisuel Motion design",
+    nb_heures_PPN: 30.0,
+    nb_heures_semaine: 30.0,
+    type: "Ressource",
+    competences: ["nlbvjuwpds4y1uy"],
+    ressources: [],
+    semestre: "bnvylaxvx16lhyk",
+    AC: ["nlbvjuwpds4y1uy"],
+    description:
+      "<strong>Objectifs :</strong><br>Maîtriser les techniques avancées de motion design.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1607",
+  },
+  {
+    code: "R407 Dev",
+    name: "Développement back",
+    nb_heures_PPN: 40.0,
+    nb_heures_semaine: 40.0,
+    type: "Ressource",
+    competences: ["wm200e26utyjyk5"],
+    ressources: [],
+    semestre: "bnvylaxvx16lhyk",
+    AC: ["v3jzojhg8f76dfg"],
+    description:
+      "<strong>Objectifs :</strong><br>Développer des API robustes et sécurisées.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1608",
   },
   {
     code: "R407 Strat UX",
@@ -1186,233 +778,22 @@ const dataList = [
     semestre: "bnvylaxvx16lhyk",
     AC: ["v2jzojhg8f76dfg"],
     description:
-      "<strong>Objectifs :</strong><br>Gérer la production et la diffusion de contenus sur différents canaux.",
+      "<strong>Objectifs :</strong><br>Gérer la production et la diffusion de contenus.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1609",
   },
   {
-    code: "SAE401 Crea",
-    name: "Créer pour une campagne de communication visuelle",
-    nb_heures_PPN: 40.0,
-    nb_heures_semaine: 40.0,
-    type: "SAE",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: ["R405 Crea", "R406 Crea", "R407 Crea", "R408 Crea"],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Concevoir l'identité visuelle globale d'une campagne de communication.",
-  },
-  {
-    code: "SAE401 Dev",
-    name: "Développer pour le Web",
-    nb_heures_PPN: 60.0,
-    nb_heures_semaine: 60.0,
-    type: "SAE",
-    competences: ["wm200e26utyjyk5"],
-    ressources: ["R405 Dev", "R406 Dev", "R407 Dev", "R408 Dev"],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Développer une application web complexe (Full Stack) en équipe.",
-  },
-  {
-    code: "SAE401 Strat UX",
-    name: "Mettre en place une solution ecommerce et la stratégie associée",
-    nb_heures_PPN: 50.0,
-    nb_heures_semaine: 50.0,
-    type: "SAE",
-    competences: ["iigajcomws2d9ld"],
-    ressources: ["R405 Strat UX", "R406 Strat UX", "R407 Strat UX"],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Lancer une boutique en ligne : stratégie, ergonomie et promotion.",
-  },
-  {
-    code: "SAE402 Crea",
-    name: "Produire du contenu multimédia",
-    nb_heures_PPN: 45.0,
-    nb_heures_semaine: 45.0,
-    type: "SAE",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [
-      "R101",
-      "R102",
-      "R103",
-      "R104",
-      "R105",
-      "R106",
-      "R107",
-      "R108",
-      "R109",
-      "R110",
-      "R111",
-      "R112",
-    ],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Réaliser des contenus multimédias (vidéo, motion, web) pour un client réel.",
-  },
-  {
-    code: "SAE402 Dev",
-    name: "Concevoir un dispositif interactif",
-    nb_heures_PPN: 25.0,
-    nb_heures_semaine: 25.0,
-    type: "SAE",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [
-      "R101",
-      "R102",
-      "R103",
-      "R104",
-      "R105",
-      "R106",
-      "R107",
-      "R108",
-      "R109",
-      "R110",
-      "R111",
-      "R112",
-    ],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Développer un dispositif interactif innovant (jeu, installation, application).",
-  },
-  {
-    code: "SAE402 Strat Ux",
-    name: "Développer une communication sur les médias sociaux",
-    nb_heures_PPN: 35.0,
-    nb_heures_semaine: 35.0,
-    type: "SAE",
-    competences: ["iigajcomws2d9ld"],
-    ressources: [
-      "R101",
-      "R102",
-      "R103",
-      "R104",
-      "R105",
-      "R106",
-      "R107",
-      "R108",
-      "R109",
-      "R110",
-      "R111",
-      "R112",
-    ],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Descriptif :</strong><br>Gérer la présence sociale d'une marque (Community Management).",
-  },
-  {
-    code: "S4 Portfolio Créa",
-    name: "Portfolio Parcours Création Numérique",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "SAE",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Valoriser ses compétences créatives et son identité artistique.",
-  },
-  {
-    code: "S4 Portfolio Dev",
-    name: "Portfolio Parcours Développement Web et Dispositifs interactifs",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "SAE",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Présenter ses projets techniques et son expertise de développeur.",
-  },
-  {
-    code: "S4 Portfolio Strat UX",
-    name: "Portfolio Parcours Stratégie de communication et design d'expérience",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "SAE",
-    competences: ["iigajcomws2d9ld"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Mettre en avant ses compétences en stratégie et UX Design.",
-  },
-  {
-    code: "S4 Stage Créa",
-    name: "Stage Parcours Création Numérique",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Stage",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Mise en pratique des compétences en entreprise (8 à 12 semaines).",
-  },
-  {
-    code: "S4 Stage Strat UX",
-    name: "Stage Parcours Stratégie de communication et design d'expérience",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Stage",
-    competences: ["iigajcomws2d9ld"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Immersion professionnelle en agence ou chez l'annonceur.",
-  },
-  {
-    code: "S4 Stage Dev",
-    name: "Stage Parcours Développement Web et Dispositifs interactifs",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Stage",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "bnvylaxvx16lhyk",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Intégration dans une équipe de développement web ou mobile.",
-  },
-  {
-    code: "R501",
-    name: "Anglais",
-    nb_heures_PPN: 20.0,
-    nb_heures_semaine: 20.0,
+    code: "R408 Crea",
+    name: "Ecriture multimédia et narration",
+    nb_heures_PPN: 30.0,
+    nb_heures_semaine: 30.0,
     type: "Ressource",
-    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik", "nlbvjuwpds4y1uy"],
+    competences: ["nlbvjuwpds4y1uy"],
     ressources: [],
-    semestre: "nwyvl83zp0369yc",
-    AC: [
-      "ic0yg8jxyy9prav",
-      "okmrt6kxxt5muvd",
-      "5rqf35r9f2mltmb",
-      "qz21a34rigm62v0",
-    ],
+    semestre: "bnvylaxvx16lhyk",
+    AC: ["bn1sev819i4e7uw"],
     description:
-      "<strong>Objectifs :</strong><br>Perfectionner son anglais professionnel pour la soutenance et le recrutement.",
-  },
-  {
-    code: "R502",
-    name: "Management et Assurance qualité",
-    nb_heures_PPN: 10.0,
-    nb_heures_semaine: 10.0,
-    type: "Ressource",
-    competences: ["dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "nwyvl83zp0369yc",
-    AC: ["081rzo9ghn8s7df", "f9n3lgqllcu2gnk", "lkdo07iy7ue3xi0"],
-    description:
-      "<strong>Objectifs :</strong><br>Maîtriser les processus qualité et le management d'équipe projet.",
+      "<strong>Objectifs :</strong><br>Scénariser des projets transmédias et immersifs.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1610",
   },
   {
     code: "R503",
@@ -1426,6 +807,7 @@ const dataList = [
     AC: ["f9n3lgqllcu2gnk"],
     description:
       "<strong>Objectifs :</strong><br>Comprendre la création d'entreprise et l'intrapreneuriat.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1611",
   },
   {
     code: "R504",
@@ -1438,7 +820,8 @@ const dataList = [
     semestre: "nwyvl83zp0369yc",
     AC: ["lkdo07iy7ue3xi0", "aplmqdo6os9ckax", "vagus96n0d95iug"],
     description:
-      "<strong>Objectifs :</strong><br>Préparer son insertion professionnelle ou sa poursuite d'études.",
+      "<strong>Objectifs :</strong><br>Préparer son insertion professionnelle.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1612",
   },
   {
     code: "R505 Créa",
@@ -1452,32 +835,7 @@ const dataList = [
     AC: ["v7jzojhg8f76dfg"],
     description:
       "<strong>Objectifs :</strong><br>Concevoir et piloter une direction artistique globale.",
-  },
-  {
-    code: "R506 Créa",
-    name: "Création numérique",
-    nb_heures_PPN: 75.0,
-    nb_heures_semaine: 75.0,
-    type: "Ressource",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "nwyvl83zp0369yc",
-    AC: ["v9jzojhg8f76dfg"],
-    description:
-      "<strong>Objectifs :</strong><br>Réaliser des productions numériques complexes et innovantes.",
-  },
-  {
-    code: "R507 Créa",
-    name: "Ecriture Multimédia et narration",
-    nb_heures_PPN: 75.0,
-    nb_heures_semaine: 75.0,
-    type: "Ressource",
-    competences: ["nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "nwyvl83zp0369yc",
-    AC: ["bn1sev819i4e7uw"],
-    description:
-      "<strong>Objectifs :</strong><br>Développer des narrations immersives et interactives.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1613",
   },
   {
     code: "R505 Dev",
@@ -1490,46 +848,8 @@ const dataList = [
     semestre: "nwyvl83zp0369yc",
     AC: ["v8jzojhg8f76dfg"],
     description:
-      "<strong>Objectifs :</strong><br>Expertise sur les frameworks Front-End et l'architecture logicielle.",
-  },
-  {
-    code: "R506 Dev",
-    name: "Développement back avancé",
-    nb_heures_PPN: 50.0,
-    nb_heures_semaine: 50.0,
-    type: "Ressource",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "nwyvl83zp0369yc",
-    AC: ["v0jzojhg8f76dfg"],
-    description:
-      "<strong>Objectifs :</strong><br>Architecture micro-services, sécurité avancée et performance.",
-  },
-  {
-    code: "R507 Dev",
-    name: "Dispositifs interactifs",
-    nb_heures_PPN: 50.0,
-    nb_heures_semaine: 50.0,
-    type: "Ressource",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "nwyvl83zp0369yc",
-    AC: ["jun69dqw7z91hbe"],
-    description:
-      "<strong>Objectifs :</strong><br>Développement d'applications mobiles, PWA et objets connectés.",
-  },
-  {
-    code: "R508 Dev",
-    name: "Hébergement et cybersécurité",
-    nb_heures_PPN: 40.0,
-    nb_heures_semaine: 40.0,
-    type: "Ressource",
-    competences: ["wm200e26utyjyk5"],
-    ressources: [],
-    semestre: "nwyvl83zp0369yc",
-    AC: ["d64br92f1vevjek"],
-    description:
-      "<strong>Objectifs :</strong><br>DevOps, intégration continue (CI/CD) et sécurisation des infrastructures.",
+      "<strong>Objectifs :</strong><br>Expertise sur les frameworks Front-End.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1614",
   },
   {
     code: "R505 Strat UX",
@@ -1543,6 +863,35 @@ const dataList = [
     AC: ["u5jzojhg8f76dfg"],
     description:
       "<strong>Objectifs :</strong><br>Pilotage de la stratégie de communication globale.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1618",
+  },
+  {
+    code: "R506 Créa",
+    name: "Création numérique",
+    nb_heures_PPN: 75.0,
+    nb_heures_semaine: 75.0,
+    type: "Ressource",
+    competences: ["nlbvjuwpds4y1uy"],
+    ressources: [],
+    semestre: "nwyvl83zp0369yc",
+    AC: ["v9jzojhg8f76dfg"],
+    description:
+      "<strong>Objectifs :</strong><br>Réaliser des productions numériques complexes.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1619",
+  },
+  {
+    code: "R506 Dev",
+    name: "Développement back avancé",
+    nb_heures_PPN: 50.0,
+    nb_heures_semaine: 50.0,
+    type: "Ressource",
+    competences: ["wm200e26utyjyk5"],
+    ressources: [],
+    semestre: "nwyvl83zp0369yc",
+    AC: ["v0jzojhg8f76dfg"],
+    description:
+      "<strong>Objectifs :</strong><br>Architecture micro-services et sécurité avancée.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1620",
   },
   {
     code: "R506 Strat UX",
@@ -1556,6 +905,35 @@ const dataList = [
     AC: ["u4jzojhg8f76dfg"],
     description:
       "<strong>Objectifs :</strong><br>Growth Hacking, acquisition et fidélisation client.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/3114",
+  },
+  {
+    code: "R507 Créa",
+    name: "Ecriture Multimédia et narration",
+    nb_heures_PPN: 75.0,
+    nb_heures_semaine: 75.0,
+    type: "Ressource",
+    competences: ["nlbvjuwpds4y1uy"],
+    ressources: [],
+    semestre: "nwyvl83zp0369yc",
+    AC: ["bn1sev819i4e7uw"],
+    description:
+      "<strong>Objectifs :</strong><br>Développer des narrations immersives.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1621",
+  },
+  {
+    code: "R507 Dev",
+    name: "Dispositifs interactifs",
+    nb_heures_PPN: 50.0,
+    nb_heures_semaine: 50.0,
+    type: "Ressource",
+    competences: ["wm200e26utyjyk5"],
+    ressources: [],
+    semestre: "nwyvl83zp0369yc",
+    AC: ["jun69dqw7z91hbe"],
+    description:
+      "<strong>Objectifs :</strong><br>Développement d'applications mobiles et PWA.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1622",
   },
   {
     code: "R507 Strat UX",
@@ -1568,28 +946,498 @@ const dataList = [
     semestre: "nwyvl83zp0369yc",
     AC: ["u1jzojhg8f76dfg"],
     description:
-      "<strong>Objectifs :</strong><br>Service Design et innovation par l'expérience utilisateur.",
+      "<strong>Objectifs :</strong><br>Service Design et innovation par l'UX.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1623",
   },
   {
-    code: "SAE501 Créa",
-    name: "Créer par/pour le numérique",
+    code: "R508 Dev",
+    name: "Hébergement et cybersécurité",
+    nb_heures_PPN: 40.0,
+    nb_heures_semaine: 40.0,
+    type: "Ressource",
+    competences: ["wm200e26utyjyk5"],
+    ressources: [],
+    semestre: "nwyvl83zp0369yc",
+    AC: ["d64br92f1vevjek"],
+    description:
+      "<strong>Objectifs :</strong><br>DevOps et sécurisation des infrastructures.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/3115",
+  },
+  {
+    code: "R601",
+    name: "Entrepreneuriat",
+    nb_heures_PPN: 15.0,
+    nb_heures_semaine: 15.0,
+    type: "Ressource",
+    competences: ["dfqxt612fm54xik"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: ["f9n3lgqllcu2gnk"],
+    description:
+      "<strong>Objectifs :</strong><br>Finaliser son projet de création d'entreprise.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1616",
+  },
+  {
+    code: "R602 Créa",
+    name: "Création numérique interactive",
+    nb_heures_PPN: 38.0,
+    nb_heures_semaine: 38.0,
+    type: "Ressource",
+    competences: ["dfqxt612fm54xik", "nlbvjuwpds4y1uy"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: ["u3jzojhg8f76dfg", "v0jzojhg8f76dfg"],
+    description:
+      "<strong>Objectifs :</strong><br>Exploration de technologies créatives émergentes.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1617",
+  },
+  {
+    code: "R602 Dev",
+    name: "Développement Web et dispositif interactif",
+    nb_heures_PPN: 38.0,
+    nb_heures_semaine: 38.0,
+    type: "Ressource",
+    competences: ["wm200e26utyjyk5", "dfqxt612fm54xik"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: ["v1jzojhg8f76dfg", "v2jzojhg8f76dfg"],
+    description:
+      "<strong>Objectifs :</strong><br>Veille technologique et prototypage.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/6303",
+  },
+  {
+    code: "R602 Strat UX",
+    name: "Design d'expérience",
+    nb_heures_PPN: 18.0,
+    nb_heures_semaine: 18.0,
+    type: "Ressource",
+    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: ["u1jzojhg8f76dfg", "v2jzojhg8f76dfg"],
+    description:
+      "<strong>Objectifs :</strong><br>Innovation par le design et prospective.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/893",
+  },
+  {
+    code: "R603 Strat UX",
+    name: "Stratégie de communication pluri média",
+    nb_heures_PPN: 20.0,
+    nb_heures_semaine: 20.0,
+    type: "Ressource",
+    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: ["u6jzojhg8f76dfg", "v2jzojhg8f76dfg"],
+    description:
+      "<strong>Objectifs :</strong><br>Pilotage de campagnes complexes.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/895",
+  },
+  {
+    code: "S2 Portfolio",
+    name: "Portfolio",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "SAE",
+    competences: [
+      "szy17ug4fua81xz",
+      "iigajcomws2d9ld",
+      "wm200e26utyjyk5",
+      "dfqxt612fm54xik",
+    ],
+    ressources: [],
+    semestre: "zgm8hcf9uyyl70u",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Valoriser ses compétences et réalisations.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/891",
+  },
+  {
+    code: "S4 Portfolio Créa",
+    name: "Portfolio Parcours Création Numérique",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "SAE",
+    competences: [
+      "szy17ug4fua81xz",
+      "iigajcomws2d9ld",
+      "wm200e26utyjyk5",
+      "dfqxt612fm54xik",
+    ],
+    ressources: [],
+    semestre: "bnvylaxvx16lhyk",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Valoriser ses compétences créatives.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/894",
+  },
+  {
+    code: "S4 Portfolio Dev",
+    name: "Portfolio Parcours Développement Web et Dispositifs interactifs",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "SAE",
+    competences: [
+      "szy17ug4fua81xz",
+      "iigajcomws2d9ld",
+      "wm200e26utyjyk5",
+      "dfqxt612fm54xik",
+    ],
+    ressources: [],
+    semestre: "bnvylaxvx16lhyk",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Présenter ses projets techniques.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/896",
+  },
+  {
+    code: "S4 Portfolio Strat UX",
+    name: "Portfolio Parcours Stratégie de communication et design d'expérience",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "SAE",
+    competences: [
+      "szy17ug4fua81xz",
+      "iigajcomws2d9ld",
+      "wm200e26utyjyk5",
+      "dfqxt612fm54xik",
+    ],
+    ressources: [],
+    semestre: "bnvylaxvx16lhyk",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Mettre en avant ses compétences en stratégie.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/892",
+  },
+  {
+    code: "S4 Stage Créa",
+    name: "Stage Parcours Création Numérique",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "Stage",
+    competences: [
+      "szy17ug4fua81xz",
+      "iigajcomws2d9ld",
+      "wm200e26utyjyk5",
+      "dfqxt612fm54xik",
+    ],
+    ressources: [],
+    semestre: "bnvylaxvx16lhyk",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Mise en pratique des compétences en entreprise.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/1273",
+  },
+  {
+    code: "S4 Stage Dev",
+    name: "Stage Parcours Développement Web et Dispositifs interactifs",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "Stage",
+    competences: [
+      "szy17ug4fua81xz",
+      "iigajcomws2d9ld",
+      "wm200e26utyjyk5",
+      "dfqxt612fm54xik",
+    ],
+    ressources: [],
+    semestre: "bnvylaxvx16lhyk",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Intégration dans une équipe de développement.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/898",
+  },
+  {
+    code: "S6 Portfolio Créa",
+    name: "Portfolio Parcours Création Numérique",
     nb_heures_PPN: 0.0,
     nb_heures_semaine: 0.0,
     type: "SAE",
     competences: ["dfqxt612fm54xik", "nlbvjuwpds4y1uy"],
-    ressources: [
-      "R501",
-      "R502",
-      "R503",
-      "R504",
-      "R505 Créa",
-      "R506 Créa",
-      "R507 Créa",
-    ],
-    semestre: "nwyvl83zp0369yc",
+    ressources: [],
+    semestre: "zt70k593902p24t",
     AC: [],
     description:
-      "<strong>Descriptif :</strong><br>Conduite d'un projet créatif d'envergure en autonomie.",
+      "<strong>Objectifs :</strong><br>Finalisation du portfolio de fin d'études.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/1274",
+  },
+  {
+    code: "S6 Portfolio Dev",
+    name: "Portfolio Parcours Développement Web et Dispositifs interactifs",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "SAE",
+    competences: ["wm200e26utyjyk5", "dfqxt612fm54xik"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Valorisation des projets techniques.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/906",
+  },
+  {
+    code: "S6 Portfolio Strat UX",
+    name: "Portfolio Parcours Stratégie de communication et design d'expérience",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "SAE",
+    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Démonstration de l'expertise stratégique.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/1282",
+  },
+  {
+    code: "S6 Stage Créa",
+    name: "Stage Parcours Création Numérique",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "Stage",
+    competences: ["dfqxt612fm54xik", "nlbvjuwpds4y1uy"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Stage de fin d'études ou alternance.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/1275",
+  },
+  {
+    code: "S6 Stage Dev",
+    name: "Stage Parcours Développement Web et Dispositifs interactifs",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "Stage",
+    competences: ["wm200e26utyjyk5", "dfqxt612fm54xik"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Stage de fin d'études ou alternance.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1624",
+  },
+  {
+    code: "S6 Stage Strat UX",
+    name: "Stage Parcours Stratégie de communication et design d'expérience",
+    nb_heures_PPN: 0.0,
+    nb_heures_semaine: 0.0,
+    type: "Stage",
+    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik"],
+    ressources: [],
+    semestre: "zt70k593902p24t",
+    AC: [],
+    description:
+      "<strong>Objectifs :</strong><br>Stage de fin d'études ou alternance.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/6300",
+  },
+  {
+    code: "SAE101",
+    name: "Auditer une communication numérique",
+    nb_heures_PPN: 25.0,
+    nb_heures_semaine: 25.0,
+    type: "SAE",
+    competences: ["szy17ug4fua81xz"],
+    ressources: ["R109", "R104", "R105", "R109", "R114", "R116"],
+    semestre: "84nitn3xv6us4l8",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Mener un audit complet de la présence numérique.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/6301",
+  },
+  {
+    code: "SAE102",
+    name: "Concevoir une recommandation de communication numérique",
+    nb_heures_PPN: 20.0,
+    nb_heures_semaine: 20.0,
+    type: "SAE",
+    competences: ["iigajcomws2d9ld"],
+    ressources: ["R101", "R105", "R106"],
+    semestre: "84nitn3xv6us4l8",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Élaborer une stratégie de communication digitale.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/6302",
+  },
+  {
+    code: "SAE103",
+    name: "Produire les éléments d'une communication visuelle",
+    nb_heures_PPN: 22.5,
+    nb_heures_semaine: 22.5,
+    type: "SAE",
+    competences: ["nlbvjuwpds4y1uy"],
+    ressources: ["R108", "R109", "R114"],
+    semestre: "84nitn3xv6us4l8",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Concevoir et réaliser des supports graphiques.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1631",
+  },
+  {
+    code: "SAE104",
+    name: "Réaliser une production audio et vidéo",
+    nb_heures_PPN: 22.5,
+    nb_heures_semaine: 22.5,
+    type: "SAE",
+    competences: ["nlbvjuwpds4y1uy"],
+    ressources: ["R110", "R114"],
+    semestre: "84nitn3xv6us4l8",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Réaliser une courte vidéo promotionnelle.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1633",
+  },
+  {
+    code: "SAE105",
+    name: "Produire un site Web",
+    nb_heures_PPN: 55.0,
+    nb_heures_semaine: 55.0,
+    type: "SAE",
+    competences: ["wm200e26utyjyk5"],
+    ressources: ["R111", "R112", "R113", "R115"],
+    semestre: "84nitn3xv6us4l8",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Développer un site web statique multipages.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1634",
+  },
+  {
+    code: "SAE106",
+    name: "Gérer un projet de communication numérique",
+    nb_heures_PPN: 45.0,
+    nb_heures_semaine: 45.0,
+    type: "SAE",
+    competences: ["dfqxt612fm54xik"],
+    ressources: ["R101", "R106", "R115", "R116", "R117"],
+    semestre: "84nitn3xv6us4l8",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Coordonner une équipe autour d'un projet.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1637",
+  },
+  {
+    code: "SAE201",
+    name: "Exploration des usages",
+    nb_heures_PPN: 20.0,
+    nb_heures_semaine: 20.0,
+    type: "SAE",
+    competences: ["szy17ug4fua81xz"],
+    ressources: ["R203", "R204", "R216"],
+    semestre: "zgm8hcf9uyyl70u",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Réaliser une étude sur les usages numériques.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1638",
+  },
+  {
+    code: "SAE202",
+    name: "Conception d'un produit ou d'un service et sa communication",
+    nb_heures_PPN: 105.0,
+    nb_heures_semaine: 105.0,
+    type: "SAE",
+    competences: [
+      "iigajcomws2d9ld",
+      "wm200e26utyjyk5",
+      "dfqxt612fm54xik",
+      "nlbvjuwpds4y1uy",
+    ],
+    ressources: [
+      "R201",
+      "R202",
+      "R205",
+      "R207",
+      "R210",
+      "R209",
+      "R208",
+      "R216",
+      "R211",
+      "R217",
+    ],
+    semestre: "zgm8hcf9uyyl70u",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Concevoir un service numérique innovant.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1636",
+  },
+  {
+    code: "SAE203",
+    name: "Concevoir un site web avec une source de données",
+    nb_heures_PPN: 50.0,
+    nb_heures_semaine: 50.0,
+    type: "SAE",
+    competences: ["wm200e26utyjyk5"],
+    ressources: ["R212", "R213", "R214", "R215"],
+    semestre: "zgm8hcf9uyyl70u",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Développer un site web dynamique administrable.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1635",
+  },
+  {
+    code: "SAE204",
+    name: "Construire sa présence en ligne",
+    nb_heures_PPN: 20.0,
+    nb_heures_semaine: 20.0,
+    type: "SAE",
+    competences: ["dfqxt612fm54xik"],
+    ressources: ["R206", "R218", "R219"],
+    semestre: "zgm8hcf9uyyl70u",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Développer son identité numérique professionnelle.",
+    fiche: "https://orebut.iut.fr/but/fiche-ressource/1628",
+  },
+  {
+    code: "SAE303",
+    name: "Concevoir des visualisations de données pour le web et un support animé",
+    nb_heures_PPN: 20.0,
+    nb_heures_semaine: 20.0,
+    type: "SAE",
+    competences: ["szy17ug4fua81xz", "wm200e26utyjyk5", "nlbvjuwpds4y1uy"],
+    ressources: ["R315", "R311", "R316"],
+    semestre: "0gceebh8clg5mbp",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Créer des visualisations de données interactives.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/901",
+  },
+  {
+    code: "SAE401 Crea",
+    name: "Créer pour une campagne de communication visuelle",
+    nb_heures_PPN: 40.0,
+    nb_heures_semaine: 40.0,
+    type: "SAE",
+    competences: [
+      "szy17ug4fua81xz",
+      "iigajcomws2d9ld",
+      "dfqxt612fm54xik",
+      "nlbvjuwpds4y1uy",
+    ],
+    ressources: ["R405 Crea", "R406 Crea", "R407 Crea", "R408 Crea"],
+    semestre: "bnvylaxvx16lhyk",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Concevoir l'identité visuelle globale.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/902",
+  },
+  {
+    code: "SAE401 Dev",
+    name: "Développer pour le Web",
+    nb_heures_PPN: 60.0,
+    nb_heures_semaine: 60.0,
+    type: "SAE",
+    competences: [
+      "szy17ug4fua81xz",
+      "iigajcomws2d9ld",
+      "wm200e26utyjyk5",
+      "dfqxt612fm54xik",
+    ],
+    ressources: ["R405 Dev", "R406 Dev", "R407 Dev", "R408 Dev"],
+    semestre: "bnvylaxvx16lhyk",
+    AC: [],
+    description:
+      "<strong>Descriptif :</strong><br>Développer une application web complexe.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/1283",
   },
   {
     code: "SAE501 Dev",
@@ -1611,7 +1459,8 @@ const dataList = [
     semestre: "nwyvl83zp0369yc",
     AC: [],
     description:
-      "<strong>Descriptif :</strong><br>Développement d'une solution technique complexe (Web App, Mobile, IoT).",
+      "<strong>Descriptif :</strong><br>Développement d'une solution technique complexe.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/899",
   },
   {
     code: "SAE501 Strat UX",
@@ -1632,150 +1481,8 @@ const dataList = [
     semestre: "nwyvl83zp0369yc",
     AC: [],
     description:
-      "<strong>Descriptif :</strong><br>Pilotage stratégique d'un projet de communication digitale.",
-  },
-  {
-    code: "R601",
-    name: "Entrepreneuriat",
-    nb_heures_PPN: 15.0,
-    nb_heures_semaine: 15.0,
-    type: "Ressource",
-    competences: ["dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: ["f9n3lgqllcu2gnk"],
-    description:
-      "<strong>Objectifs :</strong><br>Finaliser son projet de création d'entreprise ou d'activité freelance.",
-  },
-  {
-    code: "R602 Créa",
-    name: "Création numérique interactive",
-    nb_heures_PPN: 38.0,
-    nb_heures_semaine: 38.0,
-    type: "Ressource",
-    competences: ["dfqxt612fm54xik", "nlbvjuwpds4y1uy"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: ["u3jzojhg8f76dfg", "v0jzojhg8f76dfg"],
-    description:
-      "<strong>Objectifs :</strong><br>Exploration de technologies créatives émergentes (AR/VR, IA générative).",
-  },
-  {
-    code: "R602 Dev",
-    name: "Développement Web et dispositif interactif",
-    nb_heures_PPN: 38.0,
-    nb_heures_semaine: 38.0,
-    type: "Ressource",
-    competences: ["wm200e26utyjyk5", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: ["v1jzojhg8f76dfg", "v2jzojhg8f76dfg"],
-    description:
-      "<strong>Objectifs :</strong><br>Veille technologique et prototypage de solutions innovantes.",
-  },
-  {
-    code: "R602 Strat UX",
-    name: "Design d'expérience",
-    nb_heures_PPN: 18.0,
-    nb_heures_semaine: 18.0,
-    type: "Ressource",
-    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: ["u1jzojhg8f76dfg", "v2jzojhg8f76dfg"],
-    description:
-      "<strong>Objectifs :</strong><br>Innovation par le design et prospective.",
-  },
-  {
-    code: "R603 Strat UX",
-    name: "Stratégie de communication pluri média",
-    nb_heures_PPN: 20.0,
-    nb_heures_semaine: 20.0,
-    type: "Ressource",
-    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: ["u6jzojhg8f76dfg", "v2jzojhg8f76dfg"],
-    description:
-      "<strong>Objectifs :</strong><br>Pilotage de campagnes complexes et mesure d'impact.",
-  },
-  {
-    code: "S6 Portfolio Créa",
-    name: "Portfolio Parcours Création Numérique",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Portfolio",
-    competences: ["nlbvjuwpds4y1uy", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Finalisation du portfolio de fin d'études pour l'insertion professionnelle.",
-  },
-  {
-    code: "S6 Portfolio Dev",
-    name: "Portfolio Parcours Développement Web et Dispositifs interactifs",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Portfolio",
-    competences: ["wm200e26utyjyk5", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Valorisation des projets techniques et du profil développeur.",
-  },
-  {
-    code: "S6 Portfolio Strat UX",
-    name: "Portfolio Parcours Stratégie de communication et design d'expérience",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Portfolio",
-    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Démonstration de l'expertise stratégique et UX.",
-  },
-  {
-    code: "S6 Stage Créa",
-    name: "Stage Parcours Création Numérique",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Stage",
-    competences: ["nlbvjuwpds4y1uy", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Stage de fin d'études ou alternance (16 semaines minimum).",
-  },
-  {
-    code: "S6 Stage Dev",
-    name: "Stage Parcours Développement Web et Dispositifs interactifs",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Stage",
-    competences: ["wm200e26utyjyk5", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Stage de fin d'études ou alternance (16 semaines minimum).",
-  },
-  {
-    code: "S6 Stage Strat UX",
-    name: "Stage Parcours Stratégie de communication et design d'expérience",
-    nb_heures_PPN: 0.0,
-    nb_heures_semaine: 0.0,
-    type: "Stage",
-    competences: ["iigajcomws2d9ld", "dfqxt612fm54xik"],
-    ressources: [],
-    semestre: "zt70k593902p24t",
-    AC: [],
-    description:
-      "<strong>Objectifs :</strong><br>Stage de fin d'études ou alternance (16 semaines minimum).",
+      "<strong>Descriptif :</strong><br>Pilotage stratégique d'un projet de communication.",
+    fiche: "https://orebut.iut.fr/but/fiche-sae/1279",
   },
 ];
 
@@ -1784,16 +1491,14 @@ const dataList = [
 (async () => {
   console.log("🚀 Lancement de l'importation complète...");
 
-  // Chargement des données de référence (AC, Semestres) pour validation
   const acRecords = await pb.collection("AC").getFullList();
   const acIdsSet = new Set(acRecords.map((r) => r.id));
 
   const semRecords = await pb.collection("Semestre").getFullList();
   const semIdsSet = new Set(semRecords.map((r) => r.id));
 
-  // ÉTAPE 1 : Création / Mise à jour des contenus
   console.log(
-    "\n--- ÉTAPE 1 : Mise à jour des textes (Noms, Heures, Descriptions) ---"
+    "\n--- ÉTAPE 1 : Création / Mise à jour des contenus (incluant fiches) ---"
   );
   for (const data of dataList) {
     try {
@@ -1809,7 +1514,8 @@ const dataList = [
         type: data.type,
         competences: data.competences,
         description: data.description,
-        ressources: [], // Temporairement vide
+        fiche: data.fiche || "", // Nouveau champ fiche intégré
+        ressources: [],
         AC: [],
         semestre: "",
       };
@@ -1818,7 +1524,7 @@ const dataList = [
         await pb
           .collection("Enseignements")
           .update(existing.items[0].id, payload);
-        console.log(`✅ ${data.code} : Contenu textuel mis à jour`);
+        console.log(`✅ ${data.code} : Contenu et fiche mis à jour`);
       } else {
         await pb.collection("Enseignements").create(payload);
         console.log(`✨ ${data.code} : Nouveau cours créé`);
@@ -1828,7 +1534,6 @@ const dataList = [
     }
   }
 
-  // ÉTAPE 2 : Liaisons des relations (Semestre, AC, Ressources SAE)
   console.log("\n--- ÉTAPE 2 : Liaisons des relations complexes ---");
   const ensRecords = await pb.collection("Enseignements").getFullList();
   const ensMap = new Map(ensRecords.map((r) => [r.code, r.id]));
@@ -1840,18 +1545,14 @@ const dataList = [
 
       const updatePayload = {};
 
-      // Semestre (Validation)
       if (data.semestre && semIdsSet.has(data.semestre)) {
         updatePayload.semestre = data.semestre;
       }
 
-      // AC (Validation)
       if (data.AC && data.AC.length > 0) {
         updatePayload.AC = data.AC.filter((id) => acIdsSet.has(id));
       }
 
-      // Ressources (Validation par Code)
-      // On cherche l'ID correspondant au code de la ressource liée (ex: "R101" -> ID)
       if (data.ressources && data.ressources.length > 0) {
         updatePayload.ressources = data.ressources
           .map((code) => ensMap.get(code))
